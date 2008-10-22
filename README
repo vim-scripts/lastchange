@@ -1,0 +1,28 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2412
+
+example:
+    before script run:
+        /*
+         *       Filename: example.h
+         *           Create: 2008-8-8, 00:00:00
+         * Last Change: 
+         */
+     after script run:
+        /*
+         *       Filename: example.h
+         *           Create: 2008-8-8, 00:00:00
+         * Last Change: 2008-8-8, 11:11:11
+         */
+
+g:lastChangeName: default is 'Last Change:'
+    script will search this and put now time behind this.
+
+g:lastChangeSearchStart: default is 1
+    search range.
+g:lastChangeSearchEnd: default is 5
+    search range.
+
+g:lastChangeAutoWrite: default is 0 (false)
+    if this is true(1),script will run when you are saving and file is matching of g:lastChangeAutoWriteFile.
+
+g:lastChangeAutoWriteFile: default is '*.c,*.C,*.cpp,*.cxx,*.h,*.hpp,*.hxx,*.java,*.py'
