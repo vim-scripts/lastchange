@@ -12,7 +12,9 @@ function LastChangeReplace()
 	call cursor(g:lastChangeSearchStart, 1)
 	sil! let s:sr = search(g:lastChangeName, 'W', g:lastChangeSearchEnd)
 	if s:sr != 0
+		sil! normal zn
 		sil! execute "normal d$a".g:lastChangeName." ".strftime(g:lastChangeDateFormat)."\<ESC>"
+		sil! normal zN
 	endif
 	call cursor(s:uline, 1)
 	normal zt
